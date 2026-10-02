@@ -1,5 +1,4 @@
-# Aula 07: filas, com exemplos simples
-
+# Aula 07: filas
 Lógica de Programação. SENAI SC. Professor Rodrigo Moreira.
 
 Este material foi organizado para uma turma online de aproximadamente 50 alunos, com atividades individuais. A aula usa filas FIFO, um vetor de três posições e uma variável `quantidade`.
