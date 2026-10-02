@@ -1,4 +1,4 @@
-# Aula 07: filas FIFO
+# Aula: filas FIFO
 
 **Lógica de Programação, SENAI SC. Professor Rodrigo Moreira.**
 
@@ -61,27 +61,6 @@ Esses códigos apoiam a demonstração do professor. Você resolve as missões d
 
 ## Publicar esta atividade no GitHub Pages
 
-Estas instruções são para quem vai disponibilizar a página à turma.
-
-1. Crie ou abra o repositório que receberá a atividade. Para usar GitHub Free, utilize um repositório público.
-2. Extraia o ZIP. Envie **os arquivos de dentro da pasta**, colocando `index.html`, `README.md` e os dois `.por` na raiz do repositório. Não envie apenas o ZIP.
-3. Na aba **Code**, use **Add file > Upload files**. Arraste os arquivos e confirme em **Commit changes**.
-4. Abra **Settings > Pages**.
-5. Em **Build and deployment**, escolha **Deploy from a branch**.
-6. Em **Branch**, selecione a branch que contém o HTML, normalmente `main`, e a pasta **/(root)**. Clique em **Save**.
-7. Aguarde a publicação e copie o endereço que aparece em Pages. Compartilhe esse endereço com os alunos. O endereço da aba Code mostra o repositório, não o site da atividade.
-8. Abra o site e teste uma inserção e uma remoção antes da aula. Se o site retornar 404, confira a branch, a pasta e o nome `index.html` em letras minúsculas. Consulte a aba Actions se houver erro de publicação.
-
-Fonte das instruções: [documentação oficial do GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
-
-Se esse repositório já possui outro `index.html`, evite substituí-lo por acidente. Coloque os arquivos desta atividade em uma pasta `aula07`. O endereço da atividade terminará em `/aula07/`, mantendo a configuração de publicação da raiz.
-
-## Dados e recuperação
-
-A página guarda respostas e estado do simulador no `localStorage` do navegador. Não há servidor de coleta, cadastro ou painel do professor. Em navegação privada, ao limpar dados do navegador ou ao trocar de dispositivo/endereço, o progresso pode desaparecer. Baixe o relatório antes de fechar.
-
-O botão **Apagar meu progresso** remove o registro local depois de confirmação. Reiniciar apenas o simulador preserva as respostas. Se o navegador bloquear armazenamento, a página continua funcionando na aba aberta e avisa para baixar o relatório.
-
 ## Arquivos do repositório
 
 | Arquivo | Finalidade |
@@ -91,4 +70,3 @@ O botão **Apagar meu progresso** remove o registro local depois de confirmaçã
 | `fila_linear_sem_reset.por` | Exemplo de fila linear para demonstração. |
 | `fila_linear_com_reset.por` | Exemplo com reset ao esvaziar e menu interativo. |
 
-O roteiro e o gabarito do professor acompanham um pacote separado.
