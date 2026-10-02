@@ -1,72 +1,69 @@
-# Aula: filas FIFO
+# Aula 07: filas, com exemplos simples
 
-**Lógica de Programação, SENAI SC. Professor Rodrigo Moreira.**
+Lógica de Programação. SENAI SC. Professor Rodrigo Moreira.
 
-Nesta atividade você vai prever a ordem de atendimento, testar operações de fila e investigar os índices de um vetor. As três missões são individuais. A discussão no Miro é colaborativa.
+Este material foi organizado para uma turma online de aproximadamente 50 alunos, com atividades individuais. A aula usa filas FIFO, um vetor de três posições e uma variável `quantidade`.
 
-## Como acessar
+## Acesso à atividade
 
-Abra o link do GitHub Pages que o professor compartilhar. Se recebeu os arquivos, abra `index.html` com dois cliques. Use Chrome, Edge ou Firefox com JavaScript habilitado. A atividade funciona sem login, sem instalação e sem acesso a uma API.
+Abra o site publicado pelo professor no GitHub Pages. Se recebeu os arquivos, abra `index.html` no navegador. Não precisa instalar programas nem criar conta para resolver a atividade HTML.
 
-## O que você vai fazer
+Na página, informe seu nome ou apelido e faça cada parte quando o professor indicar.
 
-| Missão | Tempo sugerido | Seu trabalho |
-| --- | --- | --- |
-| 1. Ordem de atendimento | 10 minutos | Prever quem sai, executar inserções, remoções e consultas, comparar FIFO com LIFO. |
-| 2. O espaço que sobrou | 18 minutos | Testar um vetor de três posições sem reset e com reset ao esvaziar. Registrar inicio, fim e quantidade. |
-| 3. Entendendo o algoritmo | 13 minutos | Completar operações, escrever um pseudocódigo para três nomes e explicar um exemplo de aplicação. |
+|Parte|Questões|O que você vai praticar|
+|-|-|-|
+|1|1 a 4|FIFO, primeiro atendimento, consulta e comparação com pilha.|
+|2|5 a 8|Entrada no final, ordem dos documentos e espaço na fila.|
+|3|9 a 12|Leitura de fila\[0], quantidade, vazia e verificação de espaço.|
 
-Faça cada missão quando o professor indicar. O tempo da aula inclui explicações, demonstrações e discussão dos resultados.
+Na questão 7, monte a ordem dos três documentos usando as seleções de primeiro, segundo e terceiro. Essa questão conta como um acerto quando a sequência completa está correta.
 
-1. Informe seu nome ou apelido.
-2. Na missão 1, clique em **Preparar simulador para missão 1**, faça a previsão e execute a sequência.
-3. Clique em **Conferir missão 1** e leia os comentários. Ajuste o que precisar.
-4. Na missão 2, execute primeiro o **cenário A: sem reset**. Depois prepare o **cenário B: reset ao esvaziar** e repita os testes.
-5. Na missão 3, responda aos trechos do algoritmo e escreva o pseudocódigo para três nomes. Registre seu caso de uso com pelo menos 20 palavras. Essa explicação será lida pelo professor.
-6. Escreva o que aprendeu e sua dúvida no fim da página.
-7. Clique em **Baixar relatório .txt**. Você também pode usar **Imprimir / salvar em PDF**.
-8. Envie o arquivo pelo canal informado pelo professor. A página não envia respostas automaticamente.
+Clique em **Conferir parte** para ver os comentários. Corrija o que precisar e confira novamente. O simulador de três posições permite testar ideias, mas você pode responder às questões sem usá-lo.
 
-Não foi definido prazo ou pontuação institucional neste material. Os acertos mostrados servem como retorno para estudo.
+Ao terminar, use **Baixar resultado .txt** ou **Imprimir / salvar PDF**. Se houver entrega solicitada, envie o arquivo pelo canal informado pelo professor. A página não envia respostas automaticamente. A pontuação é um retorno para estudo, sem nota institucional estabelecida por este material.
 
-## Como ler o simulador
+O progresso fica neste navegador. Se ele bloquear o armazenamento, mantenha a aba aberta e baixe o resultado antes de fechar. Reiniciar o simulador preserva as respostas. Apagar respostas exige confirmação e apaga também o nome e o histórico local.
 
-- **inicio** aponta para o primeiro elemento válido.
-- **fim** aponta para a próxima posição de inserção. Quando chega à capacidade, fica fora do vetor.
-- **Quantidade** é `fim - inicio`, nesta implementação linear.
-- **Azul** indica elementos válidos na fila.
-- **Bege** indica valores antigos que continuam no vetor, mas já saíram da fila lógica.
-- **Branco** indica uma posição nunca usada desde a preparação do cenário.
-- **Consultar frente** não remove ninguém.
-- **Atender próximo** remove logicamente o primeiro e avança inicio.
+## Códigos comentados em Portugol
 
-A fila usa um vetor fixo. No modelo sem reset, os índices só avançam. No modelo com reset, ambos voltam a zero quando o último elemento sai. O reset só reaproveita posições depois de esvaziar completamente. Ele não resolve a falta de espaço com elementos ainda aguardando, nem implementa uma fila circular.
+1. [01\_fila\_tres\_nomes.por](codigos/01_fila_tres_nomes.por): guarda três nomes e mostra a ordem. Ainda não realiza remoções.
+2. [02\_fila\_operacoes.por](codigos/02_fila_operacoes.por): implementa adicionar, atender, consultar, listar e verificar vazia. Os testes já estão no programa.
+3. [03\_fila\_menu.por](codigos/03_fila_menu.por): usa as mesmas operações com um menu para o usuário escolher.
 
-Ao mudar capacidade ou modelo, o simulador reinicia. Suas respostas e o histórico anterior permanecem. O histórico completo, limitado aos últimos 500 registros, acompanha o relatório. A página exibe os últimos 60.
+[Visualize e copie os códigos nesta página](codigos.html). Ela funciona mesmo abrindo os arquivos localmente.
 
-## Atividade colaborativa ao vivo
+Para executar, acesse [Portugol Webstudio](https://portugol.dev/), crie um arquivo no editor, apague o exemplo inicial, cole um dos códigos completos e use o botão de execução. No arquivo 03, digite uma opção quando o programa pedir. Escolha 1 para adicionar, informe um nome, escolha 3 para consultar e 2 para atender. Use 0 para sair.
 
-[Abrir o quadro da aula no Miro](https://miro.com/app/board/uXjVEfXDFzs=/).
+Os arquivos usam a sintaxe de Portugol Studio, não Visualg. Mantenha as chaves e copie o programa inteiro.
 
-O professor dividirá a turma entre os casos de atendimento, impressora e cantina. Em cada grupo, uma pessoa opera o quadro, outra registra as conclusões e os colegas conferem a ordem. Usem notas curtas e justifiquem as respostas. Os modelos de notas existentes podem ser duplicados.
+## Como funciona esta implementação
 
-O acesso de edição dos alunos depende das configurações de compartilhamento do quadro. O professor fornecerá um link com a permissão apropriada. Se a edição não estiver disponível, o grupo dita as respostas e o professor registra no quadro.
+O primeiro elemento sempre fica em `fila\[0]`. A variável `quantidade` indica quantos elementos válidos existem e qual posição será usada na próxima inserção, quando houver espaço.
 
-## Código de apoio em Portugol
+Ao atender, o programa mostra o primeiro nome, desloca os demais uma posição para a esquerda, reduz `quantidade` e apaga a última posição liberada. Isso permite inserir novamente depois de uma saída.
 
-- [Fila linear sem reset](fila_linear_sem_reset.por): ajuda a observar o limite do índice final.
-- [Fila linear com reset e menu](fila_linear_com_reset.por): permite inserir, remover, consultar frente, listar e verificar vazia.
+Exemplo: Ana, Bruno, Caio. Ana sai. A fila fica Bruno, Caio. Davi entra. A fila fica Bruno, Caio, Davi.
 
-Esses códigos apoiam a demonstração do professor. Você resolve as missões diretamente nesta página. Para explorar os arquivos depois, abra [Portugol Webstudio](https://portugol.dev/), crie um arquivo, copie o conteúdo do `.por` e execute pelo botão de execução do editor.
+Este é um modelo didático com deslocamento. Ele difere do modelo com índices de início e fim do complemento original. Ambos podem representar FIFO, mas têm comportamento e custo de remoção diferentes. Nesta aula, o foco é entender as operações. Fila circular fica para outro momento.
 
-## Publicar esta atividade no GitHub Pages
+## Participação individual no Miro
 
-## Arquivos do repositório
+[Abra o quadro individual](https://miro.com/app/board/uXjVEfVxT2k=/). Para localizar diretamente a nota do seu número, use [Miro\_Acesso.html](Miro_Acesso.html).
 
-| Arquivo | Finalidade |
-| --- | --- |
-| `index.html` | Página completa, com estilos, simulador, missões e exportação. |
-| `README.md` | Orientações da atividade e publicação. |
-| `fila_linear_sem_reset.por` | Exemplo de fila linear para demonstração. |
-| `fila_linear_com_reset.por` | Exemplo com reset ao esvaziar e menu interativo. |
+Cada participante usa uma nota numerada de 01 a 50. O professor informa o número de cada aluno, seguindo a lista de presença. As faixas de dez notas são apenas uma organização visual. Não representam grupos.
+
+Caso do quadro: entram Ana, Bia e Caio, nessa ordem. Uma pessoa é atendida. Depois entra Davi.
+
+Na sua nota, escreva seu nome e responda:
+
+* Quem saiu?
+* Quem ficou na frente?
+* Quem aguarda, na ordem?
+* Qual é um exemplo cotidiano de fila?
+
+Edite apenas sua própria nota. Clique duas vezes nela para escrever. O professor discutirá algumas respostas com a turma. Essa atividade não tem correção automática no Miro e não é necessária para resolver o HTML.
+
+Antes da aula, o professor precisa conferir se o link permite edição pelos participantes. O acesso depende das opções de compartilhamento da conta Miro. Se houver mais de 50 participantes, podem duplicar uma nota para criar 51, 52 e assim por diante, com orientação do professor.
+
+## 
 
